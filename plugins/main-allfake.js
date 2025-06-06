@@ -36,11 +36,11 @@ global.creador = 'Wa.me/584262668729'
 global.botreal = `${(conn.user.jid == global.conn.user.jid ? 'Oficial' : 'Sub-Bot')}`
 global.ofcbot = `${conn.user.jid.split('@')[0]}`
 global.asistencia = 'Wa.me/584262668729'
-global.namech = '˒𖥻˚𝐏𝐀𝐍𝐓𝐇𝐄𝐎𝐍 - 𝐂𝐡𝐚𝐧𝐧𝐞𝐥﹋꥟'
-global.namechannel2 = '˒𖥻˚𝐏𝐀𝐍𝐓𝐇𝐄𝐎𝐍 - 𝐂𝐡𝐚𝐧𝐧𝐞𝐥﹋꥟'
-global.namegrupo = 'Group Pantheon Oficial'
-global.namecomu = '『𝗚𝗿𝘂𝗽𝗼 𝗢𝗳𝗶𝗰𝗶𝗮𝗹 PantheonBot✯』'
-global.namecomu2 = 'ThePantheonBot'
+global.namech = '˒𖥻˚𝐄𝐋𝐈 - 𝐂𝐡𝐚𝐧𝐧𝐞𝐥﹋꥟'
+global.namechannel2 = '˒𖥻˚𝐄𝐋𝐈 - 𝐂𝐡𝐚𝐧𝐧𝐞𝐋﹋꥟'
+global.namegrupo = 'Group Eli Oficial'
+global.namecomu = '『𝗚𝗿𝘂𝗽𝗼 𝗢𝗳𝗶𝗰𝗶𝗮𝗹 Eli-Bot✯』'
+global.namecomu2 = 'TheEliBot'
 
 //REACCIONES 
 global.rwait = '🕒'
@@ -153,39 +153,39 @@ global.taguser = '@' + m.sender.split("@s.whatsapp.net")
 var more = String.fromCharCode(8206)
 global.readMore = more.repeat(850)
 
-global.authsticker = `Pantheon Bot˚ \n↳@${conn.getName(m.sender)}`;
+global.authsticker = `Eli Bot˚ \n↳@${conn.getName(m.sender)}`;
 
-global.packsticker = `PantheonBot`
+global.packsticker = `Eli-Bot`
 
 //FAKES
 global.fkontak = { key: { participants:"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
 
-global.fake = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: '120363392742449171@newsletter', newsletterName: "Pantheon Bot", serverMessageId: -1 }
+global.fake = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: '120363392742449171@newsletter', newsletterName: "Eli Bot", serverMessageId: -1 }
 }}, { quoted: m }
 
 //ID CANALES
 global.idchannel = '120363392742449171@newsletter'
 global.canalIdM = ["120363392742449171@newsletter", "120363392742449171@newsletter", "120363392742449171@newsletter"]
-global.canalNombreM = ["Pantheon Bot", "Pantheon Bot", "Pantheon Bot"]
+global.canalNombreM = ["Eli Bot", "Eli Bot", "Eli Bot"]
 global.channelRD = await getRandomChannel()
 // global.estilo = { key: {  fromMe: false, participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "3876577197-120363302285079181@g.us" } : {}) }, message: { orderMessage: { itemCount : -999999, status: 1, surface : 1, message: `${packname}`, orderTitle: 'Bang', thumbnail: icons, sellerJid: '0@s.whatsapp.net'}}}
 
 global.icono = [
-"https://files.catbox.moe/kmfqee.jpg",
-"https://files.catbox.moe/kmfqee.jpg",
-"https://files.catbox.moe/kmfqee.jpg",
-"https://files.catbox.moe/kmfqee.jpg",
-"https://files.catbox.moe/kmfqee.jpg",
-"https://files.catbox.moe/kmfqee.jpg",
-"https://files.catbox.moe/kmfqee.jpg",
-"https://files.catbox.moe/kmfqee.jpg",
-"https://files.catbox.moe/kmfqee.jpg",
-"https://files.catbox.moe/kmfqee.jpg",
-"https://files.catbox.moe/kmfqee.jpg",
-"https://files.catbox.moe/kmfqee.jpg",
-"https://files.catbox.moe/kmfqee.jpg",
-"https://files.catbox.moe/kmfqee.jpg",
-"https://files.catbox.moe/kmfqee.jpg",
+"https://files.catbox.moe/r064ge.jpg",
+"https://files.catbox.moe/r064ge.jpg",
+"https://files.catbox.moe/r064ge.jpg",
+"https://files.catbox.moe/r064ge.jpg",
+"https://files.catbox.moe/r064ge.jpg",
+"https://files.catbox.moe/r064ge.jpg",
+"https://files.catbox.moe/r064ge.jpg",
+"https://files.catbox.moe/r064ge.jpg",
+"https://files.catbox.moe/r064ge.jpg",
+"https://files.catbox.moe/r064ge.jpg",
+"https://files.catbox.moe/r064ge.jpg",
+"https://files.catbox.moe/r064ge.jpg",
+"https://files.catbox.moe/r064ge.jpg",
+"https://files.catbox.moe/r064ge.jpg",
+"https://files.catbox.moe/r064ge.jpg",
 ].getRandom()
 
 global.urls = [
