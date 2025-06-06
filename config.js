@@ -16,35 +16,36 @@ global.botNumber = '' //Ejemplo: 573218138672
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
 global.owner = [
-  ['584262668729', 'PantheonShop', true]
+  ['584262668729', 'PantheonShop', true],
+  ['593989476836', 'Katy', true]
 ];
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
 global.mods = []
-global.suittag = ['584262668729'] 
-global.prems = []
+global.suittag = ['584262668729', '593989476836'] 
+global.prems = ['584262668729', '524794546398']
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
 global.libreria = 'Baileys'
 global.baileys = 'V 6.7.16' 
 global.vs = '2.2.0'
-global.nameqr = 'PantheonBot'
-global.namebot = 'Pantheon-Bot'
+global.nameqr = 'Eli-Bot'
+global.namebot = 'Eli-Bot'
 global.sessions = 'Sessions'
-global.jadi = 'PantheonBots' 
+global.jadi = 'EliBots' 
 global.JotaJadibts = true
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
-global.packname = '【✧】Pantheon-Bot ❖'
-global.botname = 'Pantheon-Bot'
-global.wm = 'Pantheon-Bot'
-global.author = 'Pantheon-Bot'
-global.dev = 'Pantheon-Bot'
-global.textbot = '「 🏛 Pantheon - Bot 🏛 」'
-global.etiqueta = 'Pantheon Bot'
+global.packname = '【✧】Eli-Bot ❖'
+global.botname = 'Eli-Bot'
+global.wm = 'Eli-Bot'
+global.author = 'Eli-Bot'
+global.dev = 'Eli-Bot'
+global.textbot = '「 🏛 Eli - Bot 🏛 」'
+global.etiqueta = 'Eli Bot'
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
