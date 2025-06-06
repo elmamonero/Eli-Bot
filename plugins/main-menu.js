@@ -4,7 +4,7 @@ const handler = async (m, { conn, usedPrefix, isPrems }) => {
   try {
     await m.react('🧡');
 
-    let img = 'https://files.catbox.moe/kmfqee.jpg';
+    let img = 'https://files.catbox.moe/r064ge.jpg';
     let insta = 'https://chat.whatsapp.com/HvDCvNqXSiW19MFXJmWhoF';
 
     const _uptime = process.uptime() * 1000;
@@ -18,13 +18,13 @@ const handler = async (m, { conn, usedPrefix, isPrems }) => {
 
     const taguser = '@' + m.sender.split('@s.whatsapp.net')[0];
 
-    const botname = 'Pantheon Bot';
+    const botname = 'Eli Bot';
 
     const text = `
-︵᷼     ⿻ *PANTHEON* ࣪   ࣭  ࣪ *WA BOT* ࣭  🐈  ࣪   ࣭
+︵᷼     ⿻ *ELI* ࣪   ࣭  ࣪ *WA BOT* ࣭  🐈  ࣪   ࣭
 ✿ *Hᴏʟᴀ ${taguser}*\n*${saludo}*
 
-> ꒰꛱ ͜Desarrollado por *Pantheon* +584262668729
+> ꒰꛱ ͜Desarrollado por *Eli-Bot* +584262668729
 
 𓏸🌺  \`Bot Name:\` ${botname}  
 𓈒𓏸🌷 \`Activo:\` ${uptime}  
@@ -352,7 +352,7 @@ ${readMore}
         forwardingScore: 999,
         externalAdReply: {
           title: '',
-          body: 'Pantheon Bot',
+          body: 'Eli Bot',
           thumbnail: await (await fetch(img)).buffer(),
           sourceUrl: insta,
           mediaType: 1,
