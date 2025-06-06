@@ -11,7 +11,7 @@ import fs, {readdirSync, statSync, unlinkSync, existsSync, mkdirSync, readFileSy
 import yargs from 'yargs';
 import {spawn} from 'child_process'
 import lodash from 'lodash'
-//import { PantheonJadiBot } from './plugins/jadibot-serbot.js';
+//import { EliJadiBot } from './plugins/jadibot-serbot.js';
 import chalk from 'chalk'
 import syntaxerror from 'syntax-error'
 import {tmpdir} from 'os'
@@ -43,7 +43,7 @@ let { say } = cfonts
 
 console.log(chalk.bold.redBright(`\n✰ Iniciando bot ✰\n`))
 
-say('Pantheon Bot', {
+say('Eli Bot', {
 font: 'block',
 align: 'center',
 colors: ['magentaBright']
@@ -289,7 +289,7 @@ return true
 /*
 global.rutaJadiBot = join(__dirname, './JadiBots')
 
-if (global.PantheonJadibts) {
+if (global.EliJadibts) {
 if (!existsSync(global.rutaJadiBot)) {
 mkdirSync(global.rutaJadiBot, { recursive: true }) 
 console.log(chalk.bold.cyan(`La carpeta: ${jadi} se creó correctamente.`))
@@ -304,7 +304,7 @@ for (const gjbts of readRutaJadiBot) {
 const botPath = join(rutaJadiBot, gjbts)
 const readBotPath = readdirSync(botPath)
 if (readBotPath.includes(creds)) {
-PantheonJadiBot({pathPantheonJadiBot: botPath, m: null, conn, args: '', usedPrefix: '/', command: 'serbot'})
+EliJadiBot({pathEliJadiBot: botPath, m: null, conn, args: '', usedPrefix: '/', command: 'serbot'})
 }
 }
 }
