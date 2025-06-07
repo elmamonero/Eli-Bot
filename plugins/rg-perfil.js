@@ -1,17 +1,34 @@
-import PhoneNumber from 'awesome-phonenumber'
-import fetch from 'node-fetch'
-import fs from 'fs';
+import fetch from 'node-fetch';
 
 var handler = async (m, { conn }) => {
   let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender;
 
-  // Intenta obtener la URL de la foto de perfil, si falla usa la de fallback.
-  let pp = await conn.profilePictureUrl(who, 'image').catch(_ => 'https://files.catbox.moe/r064ge.jpg');
+  // Intentamos obtener la URL de la foto de perfil
+  let pp;
+  try {
+    pp = await conn.profilePictureUrl(who, 'image');
+    console.log('URL de la foto de perfil:', pp);
+  } catch (e) {
+    pp = 'https://files.catbox.moe/r064ge.jpg'; // URL fallback en caso de error
+    console.log('Error al obtener foto:', e);
+  }
 
-  // Aquí puedes agregar una validación para verificar si la URL que obtuviste realmente apunta a una imagen válida
-  // Sin embargo, en general, usar `catch` como arriba es suficiente para fallback en caso de error.
+  // Verificamos si la URL es una imagen válida
+  try {
+    const res = await fetch(pp);
+    if (!res.ok || !res.headers.get('content-type')?.startsWith('image/')) {
+      // Si la URL no es válida o no es una imagen, usamos la fallback
+      pp = 'https://files.catbox.moe/r064ge.jpg';
+      console.log('La URL no es válida o no es una imagen, usando fallback');
+    }
+  } catch (err) {
+    // Error al hacer fetch, usamos fallback
+    pp = 'https://files.catbox.moe/r064ge.jpg';
+    console.log('Error al verificar la URL:', err);
+  }
 
-  let { premium, level, description, diamantes, exp, lastclaim, registered, regTime, age, role } = global.db.data.users[m.sender];
+  // Extraemos datos del usuario (esto lo tienes en tu código)
+  let { premium, level, description, diamantes, exp, registered, age, role } = global.db.data.users[m.sender];
 
   age = age || 'Sin especificar';
   description = description || 'Sin descripción';
@@ -50,7 +67,7 @@ var handler = async (m, { conn }) => {
 │⧼⚜️⧽ *Rᴀɴɢᴏ:* ${role}
 ╰─────────────⪩`.trim();
 
-  // Usa la URL recuperada (pp) en sendFile
+  // Enviamos la imagen con la descripción
   await conn.sendFile(m.chat, pp, 'perfil.jpg', `${premium ? prem.trim() : noprem.trim()}`, m, null, { mentions: [who] });
 };
 
@@ -58,4 +75,5 @@ handler.help = ['profile'];
 handler.register = true;
 handler.tags = ['rg'];
 handler.command = ['profile', 'perfil'];
+
 export default handler;
