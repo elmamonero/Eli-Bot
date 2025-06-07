@@ -24,7 +24,7 @@ const handler = async (m, { conn, usedPrefix, isPrems }) => {
 ︵᷼     ⿻ *ELI* ࣪   ࣭  ࣪ *WA BOT* ࣭  🐈  ࣪   ࣭
 ✿ *Hᴏʟᴀ ${taguser}*\n*${saludo}*
 
-> ꒰꛱ ͜Desarrollado por *Eli-Bot* +584262668729
+> ꒰꛱ ͜Desarrollado por *PantheonShop* +584262668729
 
 𓏸🌺  \`Bot Name:\` ${botname}  
 𓈒𓏸🌷 \`Activo:\` ${uptime}  
