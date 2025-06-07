@@ -1,76 +1,75 @@
-import fetch from 'node-fetch';
+// By WillZek   
 
-const handler = async (m, {conn, usedPrefix, text, isPrems}) => {
+let handler = async (m, { conn, usedPrefix }) => {  
 
-  try {
-    //const img = './media/menus/Menu2.jpg';
-    const videoUrl = 'https://files.catbox.moe/siww4z.mp4'
-    const more = String.fromCharCode(8206);
-    const readMore = more.repeat(850);
-    const taguser = '@' + m.sender.split('@s.whatsapp.net')[0];
+    let ff = `👑 𝗠𝗘𝗡𝗨 𝗙𝗥𝗘𝗘 𝗙𝗜𝗥𝗘 👑  
+    〔 👑 𝙁𝙍𝙀𝙀 𝙁𝙄𝙍𝙀 👑 〕  
+    ╭───── • 🌟 • ─────╮  
+    ├❧ 🎫 ${usedPrefix}donarsala  
+    ├❧ 🎟 ${usedPrefix}sorteo  
+    ├❧ 🗼 ${usedPrefix}bermuda  
+    ├❧ 🏜 ${usedPrefix}kalahari  
+    ├❧ 🏝 ${usedPrefix}purgatorio  
+    ├❧ 🥊 ${usedPrefix}cuadrilatero  
+    ╰───── • 🌟 • ─────╯  
+    
+    ⇝ ⚔ LISTAS VERSUS ⚔ ⇜  
+    ╭───── • 🌟 • ─────╮  
+    ├❧ 📜 ${usedPrefix}vs4  
+    ├❧ 📜 ${usedPrefix}vs6  
+    ├❧ 📜 ${usedPrefix}vs8  
+    ├❧ 📜 ${usedPrefix}vs12  
+    ├❧ 📜 ${usedPrefix}vs16  
+    ├❧ 📜 ${usedPrefix}vs20  
+    ├❧ 📜 ${usedPrefix}vs24  
+    ├❧ 📜 ${usedPrefix}interna4  
+    ├❧ 📜 ${usedPrefix}interna6  
+    ├❧ 🌸 ${usedPrefix}vs4fem  
+    ├❧ 🌸 ${usedPrefix}vs6fem  
+    ├❧ 🌸 ${usedPrefix}vs8fem  
+    ├❧ 🌸 ${usedPrefix}vs12fem  
+    ├❧ 🌸 ${usedPrefix}vs16fem  
+    ├❧ 🌸 ${usedPrefix}vs20fem  
+    ├❧ 🌸 ${usedPrefix}vs24fem  
+    ├❧ 💖 ${usedPrefix}interna4fem  
+    ├❧ 💖 ${usedPrefix}interna6fem  
+    ├❧ 🔷 ${usedPrefix}hexagonal  
+    ├❧ 🏆 ${usedPrefix}scrim  
+    ├❧ 🥇 ${usedPrefix}guerra  
+    ╰───── • 🌟 • ─────╯  
+    
+    ⇝ 📋 REGLAS VERSUS 📋 ⇜  
+    ╭───── • 🌟 • ─────╮  
+    ├❧ 📑 ${usedPrefix}reglasclk  
+    ├❧ 📜 ${usedPrefix}reglascuadri  
+    ├❧ 👑 ${usedPrefix}reglastreino  
+    ├❧ 🏰 ${usedPrefix}reglas8imperios  
+    ├❧ 👺 ${usedPrefix}reglasapostado  
+    ├❧ 🎮 ${usedPrefix}reglaslideres  
+    ├❧ 🎮 ${usedPrefix}reglaslideres2  
+    ╰───── • 🌟 • ─────╯`;  
 
-    const str = `> 👋🏻 ¡Hola!, ${taguser}
+    let img = 'https://files.catbox.moe/kmfqee.jpg';  
 
-\`\`\`${fechaHora}\`\`\`
+    conn.sendMessage(m.chat, {  
+        text: ff,  
+        contextInfo: {  
+            externalAdReply: {  
+                title: '𓂂𓏸  𐅹੭੭ ᴍᴇɴᴜ ᴅᴇ ғʀᴇᴇ ғɪʀᴇ 🌙 ᦡᦡ',  
+                body: dev,  
+                thumbnailUrl: img,  
+                sourceUrl: redes,  
+                mediaType: 1,  
+                renderLargerThumbnail: true  
+            }  
+        }  
+    }, { quoted: fkontak });  
+    
+    m.react('🔫');  
+}  
 
-╭─• *MENÚ FREE FIRE*
-│ 𝘉𝘪𝘦𝘯𝘷𝘦𝘯𝘪𝘥𝘰
-│ 𝘚𝘶𝘮𝘦́𝘳𝘨𝘦𝘵𝘦 𝘦𝘯 𝘦𝘴𝘵𝘢
-│ 𝘢𝘷𝘦𝘯𝘵𝘶𝘳𝘢 𝘥𝘦𝘭 𝘤𝘢𝘵𝘢́𝘭𝘰𝘨𝘰 
-│ 𝘥𝘦 𝘧𝘳𝘦𝘦 𝘧𝘪𝘳𝘦.
-╰─────────────•
+handler.help = ['menuff (Menu Free Fire)'];  
+handler.tag = ['crow'];  
+handler.command = ['menuff'];  
 
-╭╼[ *LISTAS DE VS INTERNOS*]
-┃ ⓘ 𝐶𝑜𝑙𝑜𝑐𝑎 𝑙𝑎 ℎ𝑜𝑟𝑎 𝑦 𝑒𝑙 𝑝𝑎𝑖𝑠 𝑠𝑒𝑔𝑢𝑖𝑑𝑜
-┃      𝑎𝑙𝑔𝑢𝑛𝑎 𝑚𝑜𝑑𝑎𝑙𝑖𝑑𝑎𝑑.
-┃🍀➺ .inmasc4
-┃🍀➺ .infem4
-┃🍀➺ .inmixto4
-┃🪻➺ .inmasc6
-┃🪻➺ .infem6
-┃🪻➺ .inmixto6
-╰━━━━━━⋆★⋆━━━━━━⬣
-
-╭╼[ *MAPAS DE FREE FIRE*]
-┃🗼➺ .bermuda
-┃🏝️➺ .purgatorio
-┃🏜️➺ .kalahari
-┃🏗️➺ .nexterra
-┃🏞️➺ .alpes
-╰━━━━━━⋆★⋆━━━━━━⬣
-
-╭╼[ *ENCUESTA*]
-┃⚙️➺ .encuesta
-┃⚙️➺ .sala
-╰━━━━━━⋆★⋆━━━━━━⬣
-`.trim();
-/*
-    conn.sendMessage(m.chat, { image: { url: img }, caption: str, mentions: [m.sender] }, { quoted: fkontak });
-
-await conn.sendMessage(m.chat, { react: { text: '🎮', key: m.key } });*/
-
-      await conn.sendMessage(m.chat, {
-            video: { url: videoUrl },
-            caption: str,
-            mentions: [m.sender],
-            gifPlayback: true
-        }, { quoted: fkontak })
-
-//await conn.sendMessage(m.chat, { react: { text: '😇', key: m.key } });
-
-  } catch {
-    conn.reply(m.chat,'*[ ℹ️ ] Error al enviar el video.*\n\n${e}', m);
-  }
-};
-
-handler.command = /^(menuff|comandosff)$/i;
-handler.fail = null;
-
-export default handler;
-
-function clockString(ms) {
-  const h = isNaN(ms) ? '--' : Math.floor(ms / 3600000);
-  const m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60;
-  const s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60;
-  return [h, m, s].map((v) => v.toString().padStart(2, 0)).join(':');
-}
+export default handler;  
