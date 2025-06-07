@@ -12,19 +12,19 @@ let handler = async function (m, { conn, text, args, usedPrefix, command }) {
     let perfil = await conn.profilePictureUrl(whe, 'image').catch(_ => 'https://files.catbox.moe/xr2m6u.jpg')
 
     if (user.registered === true) {
-        return m.reply(`*🍚 Ya te encuentras registrado en mi base de datos.*\n*Si deseas eliminar tu registro use la función \`#unreg\`*`)
+        return m.reply(`*[ ℹ️ ] Ya te encuentras registrado.*\n\n*¿Quieres volver a registrarte?*\n\n*Use este comando para eliminar su registro*\n*\`${usedPrefix}unreg\`*`)
     }
 
-    if (!Reg.test(text)) return m.reply(`*🍚 Por favor, ingresa tu nombre y edad para registrarte en mi base de datos.*\n> *\`Ejemplo:\`*\n> ${usedPrefix + command} ${name2}.20`)
+    if (!Reg.test(text)) return m.reply(`*[ ℹ️ ] Ingresa tu nombre y edad para registrarte en mi base de datos.*\n\n*${usedPrefix + command} <nombre.edad>*\n\n*[ 💡 ] Ejemplo:*\n${usedPrefix + command} ${name2}.18`)
 
     let [_, name, splitter, age] = text.match(Reg)
-    if (!name) return m.reply('*⚠️ El nombre no puede estar vacío pendejo.*')
-    if (!age) return m.reply('*⚠️ La edad no puede estar vacía.*')
-    if (name.length >= 100) return m.reply('*⚠️ El nombre es demasiado largo.*')
+    if (!name) return m.reply('*[ ⚠️ ] El nombre no puede estar vacío pendejo.*')
+    if (!age) return m.reply('*[ ⚠️ ] La edad no puede estar vacía.*')
+    if (name.length >= 100) return m.reply('*[ ⚠️ ] El nombre es demasiado largo.*')
 
     age = parseInt(age)
-    if (age > 1000) return m.reply('*👴🏻 Qué haces acá, no deberías estar en el cementerio?*')
-    if (age < 5) return m.reply('*👶🏻 Mirá el bebé quiere jugar al bot*')
+    if (age > 1000) return m.reply('*❌ Lᴀ Eᴅᴀᴅ Iɴɢʀᴇsᴀᴅᴀ ᴇs Iɴᴄᴏʀʀᴇᴄᴛᴀ*')
+    if (age < 5) return m.reply('*❌ Lᴀ Eᴅᴀᴅ Iɴɢʀᴇsᴀᴅᴀ ᴇs Iɴᴄᴏʀʀᴇᴄᴛᴀ*')
 
     user.name = name.trim()
     user.age = age
@@ -43,21 +43,21 @@ let handler = async function (m, { conn, text, args, usedPrefix, command }) {
     }
 
     let sn = createHash('md5').update(m.sender).digest('hex')
-    let regbot = `𐙚ㅤ *𝖱𝖾︩𝗀𝗂𝗌𝗍𝗋𝗈* ㅤﾉㅤ *𝖢𝗈𝗆𝗉𝗅𝖾ł𝗈* ㅤᗝ̵\nㅤ꒰       ֹ      ELI-BOT       ִ       ꒱\n\n`
-    regbot += `✿᷎︩︪͡⪧ \`Nombre:\` ${name}\n`
-    regbot += `✿᷎︩︪͡⪧ \`Edad:\` ${age} años\n\n`
-    regbot += `𐔌𐔌  *𝖱𝖾𝖼໊𝗈𝗆͟𝗉͟𝖾͟𝗇͟𝗌͟𝖺𝗌 ࣲ* ׅ  ☕ᩨ   ׄ\n\n`
-    regbot += `ᦷᩘᦷ     ݂   💎 ፡ \`\`\`15 Diamantes\`\`\`\n`
-    regbot += `ᦷᩘᦷ     ݂   🍸 ፡ \`\`\`245 Xp\`\`\`\n`
-    regbot += `ᦷᩘᦷ     ݂   🎫 ፡ \`\`\`12 Tokens\`\`\`\n\n`
-    regbot += `> 𝖢𝗈𝗅𝗈𝖼𝖺 *#profile* 𝗉𝖺𝗋𝖺 𝗏𝖾𝗋 𝗍𝗎 𝗉𝖾𝗋𝖿𝗂𝗅`
+    let regbot = `*\`.･:｡REGISTRO COMPLETO.•:｡\`*\n\n`
+    regbot += `- *Nombre:* ${name}\n`
+    regbot += `- *Edad:* ${age} años\n\n`
+    regbot += `*RECOMPENSAS*\n\n> `
+    regbot += `💎 15 Diamantes\n> `
+    regbot += `💫 245 Exp\n> `
+    regbot += `🎫 12 Tokens\n\n`
+    regbot += `> ᥴ᥆ᥣ᥆ᥴᥲ *.profile* ⍴ᥲrᥲ ᥎ᥱr 𝗍ᥙ ⍴ᥱr𝖿іᥣ.\n> ᥎ᥱrі𝖿іᥴᥲ 𝗍ᥙ rᥱgіs𝗍r᥆ ᥲ𝗊ᥙі 👇🏻`
 
     await m.react('💌')
     await conn.sendMessage(m.chat, {
         text: regbot,
         contextInfo: {
             externalAdReply: {
-                title: '෫໋ׅׄ𝆬🍃ິ⃨ 𝖱𝖾𝗀𝗂𝗌𝗍𝗋𝗈 - 𝖲𝗁𝖺𝖽𝗈𝗐 ׅ𝖴𝗅𝗍𝗋𝖺  ׄ ׄ𑁍̵ ֕︵۪۪۪۪᷼ ּ',
+                title: '⊱『💚𝆺𝅥 𝗥𝗘𝗚𝗜𝗦𝗧𝗥𝗔𝗗𝗢(𝗔) 𝆹𝅥💚』⊰',
                 body: dev,
                 thumbnailUrl: 'https://files.catbox.moe/nwqdwh.jpg',
                 sourceUrl: 'https://whatsapp.com/channel/0029Vb1X1TDElah1FEQ4xm0K',
@@ -66,7 +66,7 @@ let handler = async function (m, { conn, text, args, usedPrefix, command }) {
                 renderLargerThumbnail: true
             }
         }
-    }, { quoted: fkontak });
+    }, { quoted: m });
 
 let chtxt = `👤 *𝚄𝚂𝙴𝚁:* ${m.pushName || 'Anónimo'}
 ☕ *𝚁𝙴𝙶𝙸𝚂𝚃𝚁𝙾:* ${user.name}
@@ -75,7 +75,7 @@ let chtxt = `👤 *𝚄𝚂𝙴𝚁:* ${m.pushName || 'Anónimo'}
 🪪 *𝚂𝙴𝚁𝙸𝙴:*
 ⤷ ${sn}`;
 
-    let channelID = '';
+    let channelID = '120363384854309225@newsletter';
         await conn.sendMessage(channelID, {
         text: chtxt,
         contextInfo: {
