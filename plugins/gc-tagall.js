@@ -12,7 +12,7 @@ const oi = `*\`AVISO:\`* ${pesan}`;
   for (const mem of participants) {
     teks += `യ ׄ🍁˚ @${mem.id.split('@')[0]}\n`;
   }
-  teks += `> *Shadow Ultra - MD*`;
+  teks += `> *ELI-BOT*`;
   conn.sendMessage(m.chat, {text: teks, mentions: participants.map((a) => a.id)} );
 };
 handler.help = ['todos *<txt>*'];
