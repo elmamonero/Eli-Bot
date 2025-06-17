@@ -43,4 +43,4 @@ const handler = async (msg, { conn }) => {
 };
 
 handler.command = ["abrirgrupo"];
-module.exports = handler;
+export default handler;
