@@ -9,6 +9,8 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     }
 
     try {
+        console.log('Intentando cambiar configuración:', isClose);
+        console.log('ID del grupo:', m.chat);
         await conn.groupSettingUpdate(m.chat, isClose);
         await conn.reply(m.chat, `✅ La configuración del grupo ha sido actualizada a: ${args[0]}`, m);
     } catch (err) {
