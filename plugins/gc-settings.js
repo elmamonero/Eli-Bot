@@ -12,7 +12,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
         console.log('Intentando cambiar configuración:', isClose);
         console.log('ID del grupo:', m.chat);
         await conn.groupSettingUpdate(m.chat, isClose);
-        await conn.reply(m.chat, `✅ La configuración del grupo ha sido actualizada a: ${args[0]}`, m);
+        // Sin confirmación adicional
     } catch (err) {
         console.error('Error en groupSettingUpdate:', err);
         await conn.reply(m.chat, `⚠️ Error al actualizar la configuración del grupo: ${err.message || err}`, m);
