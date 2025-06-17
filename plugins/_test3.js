@@ -1,5 +1,5 @@
-const fs = require("fs");
-const path = require("path");
+import fs from "fs";
+import path from "path";
 
 const handler = async (msg, { conn }) => {
   const rawID = conn.user?.id || "";
@@ -25,7 +25,7 @@ const handler = async (msg, { conn }) => {
 
   let isOwner = false;
   try {
-    const config = require("../../../config.js");
+    const config = await import("../../../config.js");
     if (config.owner) isOwner = config.owner.some(o => o[0] === senderId);
   } catch {}
 
@@ -43,4 +43,5 @@ const handler = async (msg, { conn }) => {
 };
 
 handler.command = ["testgru"];
+
 export default handler;
