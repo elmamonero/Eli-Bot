@@ -42,5 +42,5 @@ const handler = async (msg, { conn }) => {
   }, { quoted: msg });
 };
 
-handler.command = ["abrirgrupo"];
+handler.command = ["testgru"];
 export default handler;
