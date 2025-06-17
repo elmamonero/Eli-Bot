@@ -18,7 +18,7 @@ global.botNumber = '' //Ejemplo: 573218138672
 global.owner = [
   ['584262668729', 'PantheonShop', true],
   ['593989476836', 'Katy', true],
-  ['90812788543600', 'LiD', true]
+  ['90812788543600', 'LiD', true],
   ['43740332838956', 'LiD', true]
 ];
 
